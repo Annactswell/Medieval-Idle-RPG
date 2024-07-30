@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knight VS Bat</title>
+
+  <link rel="stylesheet" href="./CSS/index.css">
+</head>
+<body>
+  
+  <!-- <div class="keyboard"></div> -->
+  <canvas id="canvas"></canvas>
+  <div class="combat-info" id="app" @click="attack">
+
+    <p>地图：<span class="map">{{ place }}</span></p>
+    <p>武器：<span class="weapon">{{ weapon }}</span></p>
+    <p>敌人：<span class="enemy">{{ enemyName }}</span></p>
+    <p>生命：<span class="health">{{ heroHP }} / {{ heroMaxHP }}</span></p>
+    <p>敌方生命：<span class="enemy-health">{{ enemyHP }} / {{ enemyMaxHP }}</span></p>
+  </div>
+
+
+  <div class="buttons">
+    <button class="map">地图</button>
+    <button class="adventure">冒险</button>
+    <button class="save">保存</button>
+  </div>
+
+  <!-- <input type="text" class="change-state"> -->
+  <!-- <button class="change-state">修改</button> -->
+  
+  <script src="./JavaScript/flexible.js"></script>
+  <script src="./JavaScript/Vue2.js"></script>
+  <script src="./JavaScript/game.js" type="module"></script>
+  <script src="./JavaScript/index.js"></script>
+</body>
+</html>
