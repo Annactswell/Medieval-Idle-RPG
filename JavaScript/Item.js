@@ -55,12 +55,12 @@ export class Item {
       this.hitBox.centerX += this.speed * x;
       this.hitBox.centerY += this.speed * y;
     } else {
-      const movementX = this.speed * (x * Math.cos(this.angle) + y * Math.sin(this.angle));  // 可能是 -this.angle ？
-      const movementY = this.speed * (x * Math.sin(-this.angle) + y * Math.cos(this.angle));
-      this.x += movementX;
-      this.y += movementY;
-      this.hitBox.centerX += movementX;
-      this.hitBox.centerY += movementY;
+      const movementX = x * Math.cos(this.angle) + y * Math.sin(this.angle);  // 可能是 -this.angle ？
+      const movementY = x * Math.sin(-this.angle) + y * Math.cos(this.angle);
+      this.x += this.speed *  movementX;
+      this.y += this.speed * movementY;
+      this.hitBox.centerX += this.speed * movementX;
+      this.hitBox.centerY += this.speed * movementY;
     }
   }
 
